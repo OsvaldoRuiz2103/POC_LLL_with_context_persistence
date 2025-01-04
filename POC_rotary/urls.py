@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from LLM_with_context_persistence.views import assistant_math_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('math_assistant/', assistant_math_view, name='chat'),
 ]
